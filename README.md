@@ -1,4 +1,4 @@
-# protoc-gen-doc 自定义模板使用
+# protoc-gen-doc 自定义模板规则详解
 [配套演示工程](https://github.com/csuqiyuan/custom-protoc-doc-example)
 
 此项目中所用 proto 文件位于 `./proto` 目录下，来源于 [官方proto示例](https://github.com/pseudomuto/protoc-gen-doc/tree/master/examples/proto)
