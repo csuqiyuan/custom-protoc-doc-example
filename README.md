@@ -53,7 +53,7 @@ protoc \
 
 如果要指定自定义模型，则可修改 `--doc_opt` 的第一个参数。
 
-例如，我在 `./api` 目录下自定义了模板文件 `md.tmpl`,则 `--doc_opt` 应设置为：
+例如，我在 `./tmpl` 目录下自定义了模板文件 `case1.tmpl`,则 `--doc_opt` 应设置为：
 ```shell
 --doc_opt=./tmpl/case1.tmpl,index.md
 ```
