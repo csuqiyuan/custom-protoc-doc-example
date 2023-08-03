@@ -1,0 +1,14 @@
+<!-- case2.tmpl -->
+{{range .Files}}
+# {{.Name}}
+{{.Description}}
+
+{{.}}
+
+{{range .Services}}
+## ServiceName: {{.Name}}
+{{.Description}}
+
+{{.}}
+{{end}} <!-- end Services -->
+{{end}} <!-- end Files -->

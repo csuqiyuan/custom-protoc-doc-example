@@ -1,0 +1,22 @@
+<!-- case4.tmpl -->
+{{range .Files}}
+{{$file := .}}
+{{if eq $file.Name "Booking.proto"}}
+# {{$file.Name}}
+{{$file.Description}}
+
+{{$file}}
+{{if $file.HasServices}}
+{{range $file.Services}}
+{{$service := .}}
+## ServiceName: {{$service.Name}}
+
+{{$service.Description}}
+
+{{$service}}
+{{end}} <!-- end Services -->
+{{end}} <!-- end if -->
+{{else}}
+# 忽略 {{$file.Name}}
+{{end}} <!-- end if else -->
+{{end}} <!-- end Files -->

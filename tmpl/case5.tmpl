@@ -1,0 +1,21 @@
+<!-- case5.tmpl -->
+{{range .Files}}
+{{$file := .}}
+# {{$file.Name}}
+{{$file.Description}}
+{{$file}}
+{{range $file.Services}}
+{{$service := .}}
+## ServiceName: {{$service.Name}}
+{{$service.Description}}
+{{range $service.Methods}}
+{{$method := .}}
+### ServiceMethod: {{$method.Name}}
+{{range ($method.Option "google.api.http").Rules}}
+- {{.Method}}
+- {{.Pattern}}
+- \{{.Body}} <!-- body 为 * 时会被认为是 markdown 语法 -->
+{{end}} <!-- end Rules -->
+{{end}} <!-- end Methods -->
+{{end}} <!-- end Services -->
+{{end}} <!-- end Files -->

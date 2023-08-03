@@ -1,0 +1,16 @@
+<!-- case3.tmpl -->
+{{range .Files}}
+{{$file := .}}
+
+# {{$file.Name}}
+{{$file.Description}}
+
+{{$file}}
+{{range $file.Services}}
+{{$service := .}}
+## ServiceName: {{$service.Name}}
+{{$service.Description}}
+
+{{$service}}
+{{end}} <!-- end Services -->
+{{end}} <!-- end Files -->
