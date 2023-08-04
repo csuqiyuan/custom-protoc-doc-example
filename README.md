@@ -145,7 +145,7 @@ type File struct {
 
 修改 `--doc_opt=./tmpl/case1.tmpl,case1.md` 参数，查看运行结果：
 
-![case1](./assert/images/case1.png)
+![case1](https://github.com/csuqiyuan/custom-protoc-doc-example/blob/main/assert/images/case1.png)
 
 遍历语句非常常用，它是可以嵌套的，不光 File，连 Service、Message、ServiceMethod 等结构，都需要使用 Range 遍历进入，获取其内部结构。
 
@@ -172,7 +172,7 @@ type File struct {
 
 修改 `--doc_opt=./tmpl/case2.tmpl,case2.md` 参数，查看运行结果：
 
-![](assert/images/case2.png)
+![](https://github.com/csuqiyuan/custom-protoc-doc-example/blob/main/assert/images/case2.png)
 
 ### 参数赋值
 
@@ -200,7 +200,7 @@ type File struct {
 
 查看运行结果，可以看到用了参数的 case3 结果与 case2 完全一致：
 
-![](assert/images/case3.png)
+![](https://github.com/csuqiyuan/custom-protoc-doc-example/blob/main/assert/images/case3.png)
 
 ### 条件语句
 使用 `{{if}} {{end}}`，也可以在其中加入 `{{else}}`
@@ -244,7 +244,7 @@ type File struct {
 {{end}} <!-- end Files -->
 ```
 
-![case4](./assert/images/case4.png)
+![case4](https://github.com/csuqiyuan/custom-protoc-doc-example/blob/main/assert/images/case4.png)
 
 ### 调用函数
 想知道某个函数的功能，还要亲自阅读一下源码关于各结构体函数的实现：[templates.go](https://github.com/pseudomuto/protoc-gen-doc/blob/master/template.go)
@@ -258,7 +258,7 @@ type File struct {
 
 比较常用的 Options，如下图对 Service 进行 http 的定义：
 
-![](assert/images/options.png)
+![](https://github.com/csuqiyuan/custom-protoc-doc-example/blob/main/assert/images/options.png)
 
 为了取出这里的 Options，可以使用 ServiceMethod 的 `Option` 方法。
 
@@ -291,11 +291,11 @@ type File struct {
 
 运行后结果:
 
-![](./assert/images/case5.png)
+![](https://github.com/csuqiyuan/custom-protoc-doc-example/blob/main/assert/images/case5.png)
 
 `($method.Option "google.api.http").Rules` 对取出的 `interface{}` 类型做了类型转换。为什么用 Rules 来转换，可以在[源码](https://github.com/pseudomuto/protoc-gen-doc/blob/master/extensions/google_api_http/google_api_http.go)中找到：
 
-![](./assert/images/rules.png)
+![](https://github.com/csuqiyuan/custom-protoc-doc-example/blob/main/assert/images/rules.png)
 
 ### 其他
 
